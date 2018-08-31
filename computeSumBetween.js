@@ -11,18 +11,22 @@
 
 
 function computeSumBetween(num1, num2) {
-
-  }
-
-function arrayNumsBetween(num1, num2){
-    let returnArray = [];
-    for(let i=num1;i<num2;i++){
-        returnArray.push(i);
-    }
-    return returnArray;
+  if(num2 <= num1) return 0;
+  let numsBetween = arrayNumsBetween(num1, num2);
+  return numsBetween.reduce(getSum);
 }
 
+function arrayNumsBetween(num1, num2){
+  let returnArray = [];
+  for(let i=num1;i<num2;i++){
+    returnArray.push(i);
+  }
+  return returnArray;
+}
 
+function getSum(total, num){
+  return total + num;
+}
 
 var output = computeSumBetween(2, 5);
 console.log(output); // --> 9

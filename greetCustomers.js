@@ -22,26 +22,33 @@
 'use strict';
 
 var customerData = {
-    'Joe': {
-      visits: 1
-    },
-    'Carol': {
-      visits: 2
-    },
-    'Howard': {
-      visits: 3
-    },
-    'Carrie': {
-      visits: 4
-    }
-  };
+  'Joe': {
+    visits: 1
+  },
+  'Carol': {
+    visits: 2
+  },
+  'Howard': {
+    visits: 3
+  },
+  'Carrie': {
+    visits: 4
+  }
+};
   
-  function greetCustomer(firstName) {
-    var greeting = '';
-      
-    // your code here
-      
-    return greeting;
+function greetCustomer(firstName) {
+  var greeting = '';
+  try{
+    let visits = customerData[firstName].visits;
+    if(visits === 1){
+      greeting = `Welcome back, ${firstName}! We're glad you liked us the first time!`;
+    }else if(visits > 1)
+      greeting = `Welcome back, ${firstName}! So glad to see you again!`;   
+  }catch(e){
+    greeting = 'Welcome! Is this your first time?';
   }
 
+  return greeting;
+}
+console.log(greetCustomer('Joe'));
   

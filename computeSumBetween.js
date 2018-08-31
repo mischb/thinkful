@@ -28,5 +28,5 @@ function getSum(total, num){
   return total + num;
 }
 
-var output = computeSumBetween(2, 5);
+var output = computeSumBetween(5, 2);
 console.log(output); // --> 9

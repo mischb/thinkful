@@ -4,16 +4,17 @@
 
 // Notes:
 // * If given array is empty, it should return 0.
-'use strict'
+'use strict';
 
 function computeProductOfAllElements(arr) {
-    
+  if (arr.length === 0) return 0;
+  return arr.reduce(getProduct);
+}
+
+function getProduct(total, num) {
+  return total * num;
 }
 
 
-
-
-
-
-var output = computeProductOfAllElements([2, 5, 6]);
+var output = computeProductOfAllElements([]);
 console.log(output); // --> 60

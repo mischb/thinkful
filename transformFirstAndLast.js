@@ -21,10 +21,18 @@
 
 // Function's return value (output):
 
-// {
+// ;
 //   Kevin : 'Spacey'
 // }
+'use strict';
 
 function transformFirstAndLast(array) {
-    // your code here
-  }
+  let returnObj = {};
+  returnObj[array[0]] = array[array.length-1];
+  return returnObj;
+
+}
+
+let arr = ['Queen', 'Elizabeth', 'Of Hearts', 'Beyonce'];
+
+console.log(transformFirstAndLast(arr));

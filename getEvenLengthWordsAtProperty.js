@@ -11,9 +11,15 @@
 'use strict';
 
 function getEvenLengthWordsAtProperty(obj, key) {
-
+  let retArr = [];
+  for(let i = 0; i < obj[key].length; i ++){
+    if (isEven(obj[key][i].length)){
+      retArr.push(obj[key][i]);
+    }
   }
+  return retArr;
+}
 
 function isEven(num){
-    if(num % 2 === 0) return true;
+  if(num % 2 === 0) return true;
 }

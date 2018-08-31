@@ -11,9 +11,16 @@
 
 
 function computeSumBetween(num1, num2) {
-    // your code here
+
   }
 
+function arrayNumsBetween(num1, num2){
+    let returnArray = [];
+    for(let i=num1;i<num2;i++){
+        returnArray.push(i);
+    }
+    return returnArray;
+}
 
 
 

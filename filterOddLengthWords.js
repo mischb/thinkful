@@ -6,11 +6,11 @@
 'use strict';
 
 function filterOddLengthWords(words){
-    let returnArray = [];
-    for(let i = 0; i < words.length; i ++){
-        if(isOdd(words[i])){
-            returnArray.push(words[i]);
-        }
+  let returnArray = [];
+  for(let i = 0; i < words.length; i ++){
+    if(isOdd(words[i])){
+      returnArray.push(words[i]);
+    }
   }
   return returnArray;
 }

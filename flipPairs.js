@@ -1,8 +1,12 @@
+'use strict';
 // Flip every pair of characters in a string.
 
 // example :
+var input = 'check out how interesting this problem is, it\'s insanely interesting!';
+var output = flipPairs(input);
+console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!
 
-'use strict';
+
 function flipPairs(input)
 {
   let flipped = '';
@@ -18,6 +22,3 @@ function flipping(char1, char2){
 }
 
 
-var input = 'check out how interesting this problem is, it\'s insanely interesting!';
-var output = flipPairs(input);
-console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!

@@ -3,11 +3,22 @@
 'use strict';
 function flipEveryNChars(input, number)
 {
-  
+    let flipped = '';
+    let i = 0;
+    while i < input.length{
+        let portion = toFlip(input,i,number);
+        flipped += flipping(portion)
+    }
+    return flipped;
 }
 
+function toFlip(input, index, length){
 
+}
 
+function flipping(text){
+    
+}
 
 var input = 'a short example'; 
 var output = flipEveryNChars(input, 5);

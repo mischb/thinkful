@@ -12,10 +12,14 @@
 
 function getEvenLengthWordsAtProperty(obj, key) {
   let retArr = [];
-  for(let i = 0; i < obj[key].length; i ++){
-    if (isEven(obj[key][i].length)){
-      retArr.push(obj[key][i]);
+  try{
+    for(let i = 0; i < obj[key].length; i ++){
+      if (isEven(obj[key][i].length)){
+        retArr.push(obj[key][i]);
+      }
     }
+  }catch(e){
+    return [];
   }
   return retArr;
 }
@@ -23,3 +27,15 @@ function getEvenLengthWordsAtProperty(obj, key) {
 function isEven(num){
   if(num % 2 === 0) return true;
 }
+
+var obj = {
+//   key: ['a', 'long', 'game']
+//   key: 'yeaahhh'
+// key: ['a', 'ttt', 'ass']
+//   key: []
+  test: ['wowe']
+//   key: ['oh', 'my', 'fucking', 'god']
+};
+var output = getEvenLengthWordsAtProperty(obj, 'key');
+console.log(output); // --> ['long', 'game']
+
